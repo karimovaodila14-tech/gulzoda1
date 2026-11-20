@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple mahsulotlari uchun o'quv maqsadidagi demo do'kon.">
+  <title>Apple Store — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Asosiy navigatsiya">
+      <a class="brand" href="#home" aria-label="Apple Store bosh sahifa">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.54c-.02-2.08 1.7-3.08 1.78-3.13-.97-1.42-2.48-1.62-3.01-1.64-1.28-.13-2.52.76-3.17.76-.66 0-1.67-.74-2.75-.72-1.41.02-2.72.82-3.45 2.08-1.48 2.56-.38 6.33 1.06 8.4.7 1.02 1.53 2.16 2.62 2.12 1.05-.04 1.45-.68 2.72-.68 1.26 0 1.63.68 2.74.66 1.14-.02 1.86-1.03 2.55-2.06.8-1.17 1.13-2.3 1.15-2.36-.03-.01-2.22-.85-2.24-3.43ZM14.96 6.4c.57-.69.96-1.64.85-2.59-.82.03-1.82.55-2.41 1.23-.53.61-.99 1.58-.87 2.5.92.07 1.86-.47 2.43-1.14Z"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#iphone">iPhone</a>
+        <a href="#mac">Mac</a>
+        <a href="#ipad">iPad</a>
+        <a href="#watch">Watch</a>
+        <a href="#airpods">AirPods</a>
+        <a href="#accessories">Aksessuarlar</a>
+        <a href="#contact">Aloqa</a>
+      </div>
+      <a class="nav-cta" href="#products">Mahsulotlar</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-slide active" data-slide="0">
+        <div class="hero-copy">
+          <span class="eyebrow">YANGI AVLOD</span>
+          <h1>iPhone 17 Pro</h1>
+          <p>Har bir lahza. Yangi daraja.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#iphone">Batafsil</a>
+            <button class="btn btn-outline" data-buy="iPhone 17 Pro">Buyurtma berish</button>
+          </div>
+        </div>
+        <img src="https://media.ldlc.com/r1600/ld/products/00/06/27/52/LD0006275203.jpg" alt="iPhone 17 Pro old va orqa ko'rinishi">
+      </div>
+      <div class="hero-slide" data-slide="1">
+        <div class="hero-copy">
+          <span class="eyebrow">YENGIL. KUCHLI. MOBIL.</span>
+          <h1>MacBook Air</h1>
+          <p>Ish, ijod va kundalik g'oyalar uchun.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#mac">Mac bilan tanishing</a>
+            <button class="btn btn-outline" data-buy="MacBook Air">Buyurtma berish</button>
+          </div>
+        </div>
+        <img src="https://cheshiremacs.com/cdn/shop/files/macbook-air-m1-space-grey.png?v=1747731803&width=713" alt="MacBook Air noutbuki">
+      </div>
+      <div class="hero-slide" data-slide="2">
+        <div class="hero-copy">
+          <span class="eyebrow">MUSIQANI HIS QILING</span>
+          <h1>AirPods Pro 3</h1>
+          <p>Ovoz olamiga sho'ng'ing.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#airpods">Ko'rib chiqish</a>
+            <button class="btn btn-outline" data-buy="AirPods Pro 3">Buyurtma berish</button>
+          </div>
+        </div>
+        <img src="https://accessories.three.co.uk/cdn/shop/files/E71033095AppleAirPodsPro3MFHP4ZM_A.png?v=1758181825" alt="AirPods Pro 3 quloqchinlari va keys">
+      </div>
+      <div class="slider-controls">
+        <button id="prevSlide" aria-label="Oldingi slayd">‹</button>
+        <div class="slider-dots" id="sliderDots">
+          <button class="dot active" data-go="0" aria-label="1-slayd"></button>
+          <button class="dot" data-go="1" aria-label="2-slayd"></button>
+          <button class="dot" data-go="2" aria-label="3-slayd"></button>
+        </div>
+        <button id="nextSlide" aria-label="Keyingi slayd">›</button>
+      </div>
+    </section>
+
+    <section class="intro container">
+      <span class="eyebrow">APPLE EKOTIZIMI</span>
+      <h2>Yaxshi g'oyalar shu yerdan boshlanadi.</h2>
+      <p>Sevimli Apple qurilmangizni tanlang va uning imkoniyatlarini kashf eting.</p>
+    </section>
+
+    <section class="product-section container" id="products">
+      <div class="section-heading">
+        <div><span class="eyebrow">BIZNING TANLOV</span><h2>Mahsulotlar</h2></div>
+        <div class="filters" role="group" aria-label="Mahsulot kategoriyasi">
+          <button class="filter-btn active" data-filter="all">Barchasi</button>
+          <button class="filter-btn" data-filter="iphone">iPhone</button>
+          <button class="filter-btn" data-filter="mac">Mac</button>
+          <button class="filter-btn" data-filter="ipad">iPad</button>
+          <button class="filter-btn" data-filter="watch">Watch</button>
+          <button class="filter-btn" data-filter="airpods">AirPods</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-band" id="accessories">
+      <div class="feature-inner container">
+        <div>
+          <span class="eyebrow">HAMMASI BIR-BIRIGA MOS</span>
+          <h2>Apple bilan kundalik hayotingiz yanada qulay.</h2>
+          <p>Qurilmalaringiz birgalikda ishlaydi: fayllar, qo'ng'iroqlar va sevimli kontentingiz doimo yoningizda.</p>
+          <a class="text-link" href="#products">Barcha mahsulotlar <span>→</span></a>
+        </div>
+        <div class="feature-orbit">
+          <div class="orbit-circle"></div>
+          <img src="https://www.switch.sg/cdn/shop/files/IMG-18079955_m_jpeg_1_2c5492f3-d18f-4be6-bc56-e3e936776eff.jpg?v=1757490035" alt="Apple Watch Series 11" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="why container">
+      <div class="why-card"><span>✦</span><h3>Original dizayn</h3><p>Apple qurilmalarining taniqli va sodda dizayni.</p></div>
+      <div class="why-card"><span>◉</span><h3>Yuqori sifat</h3><p>Kundalik foydalanish uchun qulay texnologiyalar.</p></div>
+      <div class="why-card"><span>⌁</span><h3>O'zaro uyg'unlik</h3><p>Qurilmalar o'rtasida qulay bog'lanish.</p></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main container">
+      <div class="footer-brand"><a class="brand" href="#home" aria-label="Yuqoriga"><svg viewBox="0 0 24 24"><path d="M17.05 12.54c-.02-2.08 1.7-3.08 1.78-3.13-.97-1.42-2.48-1.62-3.01-1.64-1.28-.13-2.52.76-3.17.76-.66 0-1.67-.74-2.75-.72-1.41.02-2.72.82-3.45 2.08-1.48 2.56-.38 6.33 1.06 8.4.7 1.02 1.53 2.16 2.62 2.12 1.05-.04 1.45-.68 2.72-.68 1.26 0 1.63.68 2.74.66 1.14-.02 1.86-1.03 2.55-2.06.8-1.17 1.13-2.3 1.15-2.36-.03-.01-2.22-.85-2.24-3.43ZM14.96 6.4c.57-.69.96-1.64.85-2.59-.82.03-1.82.55-2.41 1.23-.53.61-.99 1.58-.87 2.5.92.07 1.86-.47 2.43-1.14Z"/></svg></a><p>Texnologiya. Soddalik. Ilhom.</p></div>
+      <div><h4>Bo'limlar</h4><a href="#iphone">iPhone</a><a href="#mac">Mac</a><a href="#ipad">iPad</a><a href="#watch">Watch</a><a href="#airpods">AirPods</a></div>
+      <div><h4>Aloqa</h4><a href="tel:+998901234567">+998 90 123 45 67</a><a href="mailto:hello@applestore-demo.uz">hello@applestore-demo.uz</a><a href="#contact">Toshkent, O'zbekiston</a></div>
+      <div><h4>Ijtimoiy tarmoqlar</h4><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://t.me" target="_blank" rel="noreferrer">Telegram ↗</a></div>
+    </div>
+    <div class="footer-bottom container"><span>© 2026 Apple Store Demo. O'quv loyiha.</span><span>Bu rasmiy Apple sayti emas.</span></div>
+  </footer>
+
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Yopish">×</button>
+      <span class="eyebrow">BUYURTMA SO'ROVI</span>
+      <h2 id="modalTitle">Ro'yxatdan o'tish</h2>
+      <p class="modal-subtitle">Ma'lumotlaringizni qoldiring. Bu demo forma — ma'lumotlar serverga yuborilmaydi.</p>
+      <form id="orderForm">
+        <label for="productName">Tanlangan mahsulot</label>
+        <input id="productName" name="product" readonly>
+        <label for="fullName">Ism-familiya</label>
+        <input id="fullName" name="name" type="text" placeholder="Ismingizni kiriting" required minlength="2">
+        <label for="phone">Telefon raqam</label>
+        <input id="phone" name="phone" type="tel" placeholder="+998 90 123 45 67" required>
+        <label for="email">Email (ixtiyoriy)</label>
+        <input id="email" name="email" type="email" placeholder="example@mail.com">
+        <button class="btn btn-dark submit-btn" type="submit">So'rov yuborish</button>
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
